@@ -1,6 +1,6 @@
 using ClosedXML.Excel;
-using PdfSharp.Pdf;
-using PdfSharp.Drawing;
+using PdfSharpCore.Pdf;
+using PdfSharpCore.Drawing;
 using HotelMaintenanceSystem.Data;
 using Microsoft.EntityFrameworkCore;
 
