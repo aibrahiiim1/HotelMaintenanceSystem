@@ -15,6 +15,8 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>()
     .AddDefaultTokenProviders();
 builder.Services.AddSignalR();
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
+builder.Services.AddScoped<HotelMaintenanceSystem.Services.NotificationService>();
+builder.Services.AddScoped<HotelMaintenanceSystem.Services.ExportService>();
 
 var app = builder.Build();
 
