@@ -1,0 +1,15 @@
+<data name="CreateOrder"><value>Create Order</value></data>
+<data name="SelectHotel"><value>Select Hotel</value></data>
+<data name="SelectDepartment"><value>Select Department</value></data>
+<data name="SelectItem"><value>Select Item</value></data>
+<data name="UploadImage"><value>Upload Image</value></data>
+<data name="Create"><value>Create</value></data>
+<data name="Dashboard"><value>Dashboard</value></data>
+<data name="Details"><value>Details</value></data>
+<data name="Assign"><value>Assign</value></data>
+<data name="Update"><value>Update</value></data>
+<data name="BackToList"><value>Back to List</value></data>
+<data name="AddNew"><value>Add New</value></data>
+<data name="TotalOrders"><value>Total Orders</value></data>
+<data name="CompletedOrders"><value>Completed Orders</value></data>
+<data name="PendingOrders"><value>Pending Orders</value></data>

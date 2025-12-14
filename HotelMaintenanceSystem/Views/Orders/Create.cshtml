@@ -1,0 +1,69 @@
+@model Order
+
+<h2>Create Order</h2>
+<form asp-action="Create" enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="Title"></label>
+        <input asp-for="Title" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label asp-for="Description"></label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <label asp-for="HotelId"></label>
+        <select asp-for="HotelId" class="form-control" required>
+            <option value="">Select Hotel</option>
+            @foreach (var hotel in ViewData["Hotels"] as List<Hotel>)
+            {
+                <option value="@hotel.Id">@hotel.Name</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="DepartmentId"></label>
+        <select asp-for="DepartmentId" class="form-control" required>
+            <option value="">Select Department</option>
+            @foreach (var dept in ViewData["Departments"] as List<Department>)
+            {
+                <option value="@dept.Id">@dept.Name</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="ItemId"></label>
+        <select asp-for="ItemId" class="form-control">
+            <option value="">Select Item (Optional)</option>
+            @foreach (var item in ViewData["Items"] as List<Item>)
+            {
+                <option value="@item.Id">@item.Name</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="Location"></label>
+        <input asp-for="Location" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Priority"></label>
+        <select asp-for="Priority" class="form-control" required>
+            @foreach (var priority in Enum.GetValues(typeof(Priority)))
+            {
+                <option value="@priority">@priority</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="ExpectedCompletionDate"></label>
+        <input asp-for="ExpectedCompletionDate" type="datetime-local" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label asp-for="IsGuestRequest"></label>
+        <input asp-for="IsGuestRequest" type="checkbox" />
+    </div>
+    <div class="form-group">
+        <label for="image">Upload Image</label>
+        <input type="file" name="image" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>

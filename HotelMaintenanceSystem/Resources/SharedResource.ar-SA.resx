@@ -1,0 +1,15 @@
+<data name="CreateOrder"><value>إنشاء طلب</value></data>
+<data name="SelectHotel"><value>اختر الفندق</value></data>
+<data name="SelectDepartment"><value>اختر القسم</value></data>
+<data name="SelectItem"><value>اختر العنصر</value></data>
+<data name="UploadImage"><value>تحميل الصورة</value></data>
+<data name="Create"><value>إنشاء</value></data>
+<data name="Dashboard"><value>لوحة التحكم</value></data>
+<data name="Details"><value>تفاصيل</value></data>
+<data name="Assign"><value>تعيين</value></data>
+<data name="Update"><value>تحديث</value></data>
+<data name="BackToList"><value>العودة إلى القائمة</value></data>
+<data name="AddNew"><value>إضافة جديد</value></data>
+<data name="TotalOrders"><value>إجمالي الطلبات</value></data>
+<data name="CompletedOrders"><value>الطلبات المكتملة</value></data>
+<data name="PendingOrders"><value>الطلبات المعلقة</value></data>

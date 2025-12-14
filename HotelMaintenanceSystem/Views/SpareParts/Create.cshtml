@@ -1,0 +1,42 @@
+@model SparePart
+
+<h2>Add Spare Part</h2>
+<form asp-action="Create">
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label asp-for="ItemId"></label>
+        <select asp-for="ItemId" class="form-control" required>
+            <option value="">Select Item</option>
+            @foreach (var item in ViewData["Items"] as List<Item>)
+            {
+                <option value="@item.Id">@item.Name</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="DepartmentId"></label>
+        <select asp-for="DepartmentId" class="form-control" required>
+            <option value="">Select Department</option>
+            @foreach (var dept in ViewData["Departments"] as List<Department>)
+            {
+                <option value="@dept.Id">@dept.Name</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="Quantity"></label>
+        <input asp-for="Quantity" type="number" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label asp-for="ReorderThreshold"></label>
+        <input asp-for="ReorderThreshold" type="number" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label asp-for="Cost"></label>
+        <input asp-for="Cost" type="number" step="0.01" class="form-control" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Add</button>
+</form>

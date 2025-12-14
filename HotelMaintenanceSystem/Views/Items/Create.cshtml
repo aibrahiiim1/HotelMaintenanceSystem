@@ -1,0 +1,49 @@
+@model Item
+
+<h2>Add Item</h2>
+<form asp-action="Create" enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label asp-for="Category"></label>
+        <input asp-for="Category" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Class"></label>
+        <input asp-for="Class" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Family"></label>
+        <input asp-for="Family" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Status"></label>
+        <select asp-for="Status" class="form-control">
+            @foreach (var status in Enum.GetValues(typeof(ItemStatus)))
+            {
+                <option value="@status">@status</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="HotelId"></label>
+        <select asp-for="HotelId" class="form-control" required>
+            <option value="">Select Hotel</option>
+            @foreach (var hotel in ViewData["Hotels"] as List<Hotel>)
+            {
+                <option value="@hotel.Id">@hotel.Name</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="Location"></label>
+        <input asp-for="Location" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="image">Upload Image</label>
+        <input type="file" name="image" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Add</button>
+</form>

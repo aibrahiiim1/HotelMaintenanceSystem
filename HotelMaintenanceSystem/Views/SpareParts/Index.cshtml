@@ -1,0 +1,27 @@
+@model IEnumerable<SparePart>
+
+<h2>Spare Parts</h2>
+<a asp-action="Create" class="btn btn-primary mb-3">Add New Spare Part</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Item</th>
+            <th>Department</th>
+            <th>Quantity</th>
+            <th>Cost</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var part in Model)
+        {
+            <tr>
+                <td>@part.Name</td>
+                <td>@part.Item.Name</td>
+                <td>@part.Department.Name</td>
+                <td>@part.Quantity</td>
+                <td>@part.Cost</td>
+            </tr>
+        }
+    </tbody>
+</table>
