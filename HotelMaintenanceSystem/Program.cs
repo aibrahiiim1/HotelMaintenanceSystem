@@ -47,4 +47,10 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 app.MapHub<NotificationHub>("/notificationHub");
 
+// Initialize database with seed data
+using (var scope = app.Services.CreateScope())
+{
+    await HotelMaintenanceSystem.Data.DbInitializer.Initialize(scope.ServiceProvider);
+}
+
 app.Run();
