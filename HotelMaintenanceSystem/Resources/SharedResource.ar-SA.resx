@@ -1,15 +1,60 @@
-<data name="CreateOrder"><value>إنشاء طلب</value></data>
-<data name="SelectHotel"><value>اختر الفندق</value></data>
-<data name="SelectDepartment"><value>اختر القسم</value></data>
-<data name="SelectItem"><value>اختر العنصر</value></data>
-<data name="UploadImage"><value>تحميل الصورة</value></data>
-<data name="Create"><value>إنشاء</value></data>
-<data name="Dashboard"><value>لوحة التحكم</value></data>
-<data name="Details"><value>تفاصيل</value></data>
-<data name="Assign"><value>تعيين</value></data>
-<data name="Update"><value>تحديث</value></data>
-<data name="BackToList"><value>العودة إلى القائمة</value></data>
-<data name="AddNew"><value>إضافة جديد</value></data>
-<data name="TotalOrders"><value>إجمالي الطلبات</value></data>
-<data name="CompletedOrders"><value>الطلبات المكتملة</value></data>
-<data name="PendingOrders"><value>الطلبات المعلقة</value></data>
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CreateOrder" xml:space="preserve">
+    <value>إنشاء طلب</value>
+  </data>
+  <data name="SelectHotel" xml:space="preserve">
+    <value>اختر الفندق</value>
+  </data>
+  <data name="SelectDepartment" xml:space="preserve">
+    <value>اختر القسم</value>
+  </data>
+  <data name="SelectItem" xml:space="preserve">
+    <value>اختر العنصر</value>
+  </data>
+  <data name="UploadImage" xml:space="preserve">
+    <value>تحميل الصورة</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>إنشاء</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>لوحة التحكم</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>تفاصيل</value>
+  </data>
+  <data name="Assign" xml:space="preserve">
+    <value>تعيين</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>تحديث</value>
+  </data>
+  <data name="BackToList" xml:space="preserve">
+    <value>العودة إلى القائمة</value>
+  </data>
+  <data name="AddNew" xml:space="preserve">
+    <value>إضافة جديد</value>
+  </data>
+  <data name="TotalOrders" xml:space="preserve">
+    <value>إجمالي الطلبات</value>
+  </data>
+  <data name="CompletedOrders" xml:space="preserve">
+    <value>الطلبات المكتملة</value>
+  </data>
+  <data name="PendingOrders" xml:space="preserve">
+    <value>الطلبات المعلقة</value>
+  </data>
+</root>

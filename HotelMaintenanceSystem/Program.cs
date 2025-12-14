@@ -15,6 +15,8 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>()
     .AddDefaultTokenProviders();
 builder.Services.AddSignalR();
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
+builder.Services.AddScoped<HotelMaintenanceSystem.Services.NotificationService>();
+builder.Services.AddScoped<HotelMaintenanceSystem.Services.ExportService>();
 
 var app = builder.Build();
 
@@ -44,5 +46,11 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 app.MapHub<NotificationHub>("/notificationHub");
+
+// Initialize database with seed data
+using (var scope = app.Services.CreateScope())
+{
+    await HotelMaintenanceSystem.Data.DbInitializer.Initialize(scope.ServiceProvider);
+}
 
 app.Run();
